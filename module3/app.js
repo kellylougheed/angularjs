@@ -82,6 +82,7 @@
           if (foundItems.length === 0) {
             errorMessage = "Nothing found.";
           }
+          console.log(errorMessage);
           console.log(foundItems);
           return foundItems;
       });
