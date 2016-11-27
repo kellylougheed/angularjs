@@ -14,7 +14,7 @@
         items: '<',
         onRemove: '&'
       },
-      controller: FoundItemsDirectiveController,
+      controller: NarrowItDownController,
       controllerAs: 'controller',
       bindToController: true
     };
@@ -39,7 +39,7 @@
 
     controller.removeItem = function(itemIndex) {
       MenuSearchService.removeItem(itemIndex);
-    }
+    };
 
   }
 
