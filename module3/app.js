@@ -74,6 +74,7 @@
             }
           }
           foundItems = emptyArray;
+          console.log(foundItems);
           return foundItems;
       });
     };
