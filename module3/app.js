@@ -73,6 +73,7 @@
               foundItems.push(menu[i]);
             }
           }
+          console.log(foundItems);
           return foundItems;
       });
     };
