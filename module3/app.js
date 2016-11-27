@@ -29,6 +29,8 @@
 
     controller.foundItems = MenuSearchService.getFoundItems();
 
+    controller.errorMessage = MenuSearchService.getErrorMessage();
+
     controller.search = function(searchTerm) {
       MenuSearchService.getMatchedMenuItems(searchTerm);
     };
@@ -56,6 +58,10 @@
       return foundItems;
     }
 
+    service.getErrorMessage = function() {
+      return errorMessage;
+    }
+
     service.removeItem = function(itemIndex) {
       console.log(itemIndex);
       foundItems.splice(itemIndex, 1);
@@ -72,6 +78,9 @@
             if (menu[i].description.includes(searchTerm) || menu[i].name.includes(searchTerm)) {
               foundItems.push(menu[i]);
             }
+          }
+          if (foundItems.length === 0) {
+            errorMessage = "Nothing found.";
           }
           console.log(foundItems);
           return foundItems;
