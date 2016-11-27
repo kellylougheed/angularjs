@@ -46,6 +46,8 @@
 
     var foundItems = [];
 
+    var errorMessage = "";
+
     service.getSearchTerm = function() {
       return searchTerm;
     };
@@ -64,14 +66,14 @@
         method: "GET",
         url: "https://davids-restaurant.herokuapp.com/menu_items.json"
         }).then(function (result) {
-          // foundItems = [];
+          var emptyArray = [];
           var menu = result.data.menu_items;
           for (var i = 0; i < result.data.menu_items.length; i++) {
             if (menu[i].description.includes(searchTerm) || menu[i].name.includes(searchTerm)) {
-              foundItems.push(menu[i]);
+              emptyArray.push(menu[i]);
             }
           }
-          console.log(foundItems);
+          foundItems = emptyArray;
           return foundItems;
       });
     };
