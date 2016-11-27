@@ -17,7 +17,6 @@
       controller: ShoppingListDirectiveController,
       controllerAs: 'list',
       bindToController: true
-  };
     };
     return ddo;
   }
