@@ -14,7 +14,7 @@
         items: '<',
         onRemove: '&method'
       },
-      controller: ShoppingListDirectiveController,
+      controller: FoundItemsDirectiveController,
       controllerAs: 'list',
       bindToController: true
     };
