@@ -31,7 +31,7 @@
 
     controller.searchTerm = MenuSearchService.getSearchTerm();
 
-    controller.foundItems = MenuSearchService.getMatchedMenuItems();
+    controller.foundItems = MenuSearchService.getFoundItems();
 
     controller.search = function(searchTerm) {
       MenuSearchService.getMatchedMenuItems(searchTerm);
@@ -54,9 +54,9 @@
       return searchTerm;
     };
 
-    // service.getFoundItems = function() {
-    //   return foundItems;
-    // }
+    service.getFoundItems = function() {
+      return foundItems;
+    }
 
     service.removeItem = function(itemIndex) {
       foundItems.splice(itemIndex, 1);
