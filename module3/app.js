@@ -14,7 +14,7 @@
         items: '<',
         onRemove: '&'
       },
-      controller: NarrowItDownController,
+      controller: FoundItemsDirectiveController,
       controllerAs: 'controller',
       bindToController: true
     };
