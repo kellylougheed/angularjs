@@ -14,9 +14,9 @@
         items: '<',
         onRemove: '&method'
       },
-      controller: FoundItemsDirectiveController,
-      controllerAs: 'list',
-      bindToController: true
+    //   controller: FoundItemsDirectiveController,
+    //   controllerAs: 'list',
+    //   bindToController: true
     };
     return ddo;
   }
