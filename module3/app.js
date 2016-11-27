@@ -20,7 +20,7 @@
   };
     };
     return ddo;
-  };
+  }
 
   function FoundItemsDirectiveController() {
     var controller = this;
