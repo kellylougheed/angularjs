@@ -12,7 +12,7 @@
       templateUrl: 'list.html',
       scope: {
         items: '<',
-        onRemove: '&'
+        onRemove: '&method'
       },
       controller: ShoppingListDirectiveController,
       controllerAs: 'list',
