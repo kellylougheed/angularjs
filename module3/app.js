@@ -13,9 +13,16 @@
       scope: {
         items: '<',
         onRemove: '&'
-      }
+      },
+      controller: FoundItemsDirectiveController,
+      controllerAs: 'controller',
+      bindToController: true
     };
     return ddo;
+  }
+
+  function FoundItemsDirectiveController() {
+    var controller = this;
   }
 
   NarrowItDownController.$inject = ['MenuSearchService', '$http'];
