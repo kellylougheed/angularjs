@@ -66,9 +66,11 @@
         }).then(function (result) {
           var menu = result.data.menu_items;
           foundItems.length = 0;
-          for (var i = 0; i < result.data.menu_items.length; i++) {
-            if (menu[i].description.includes(searchTerm) || menu[i].name.includes(searchTerm)) {
-              foundItems.push(menu[i]);
+          if (searchTerm.length < 0) {
+            for (var i = 0; i < result.data.menu_items.length; i++) {
+              if (menu[i].description.includes(searchTerm) || menu[i].name.includes(searchTerm)) {
+                foundItems.push(menu[i]);
+              }
             }
           }
           console.log(foundItems);
