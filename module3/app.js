@@ -13,17 +13,10 @@
       scope: {
         items: '<',
         onRemove: '&'
-      },
-      // controller: FoundItemsDirectiveController,
-      // controllerAs: 'controller',
-      // bindToController: true
+      }
     };
     return ddo;
   }
-
-  // function FoundItemsDirectiveController() {
-  //   var controller = this;
-  // }
 
   NarrowItDownController.$inject = ['MenuSearchService', '$http'];
   function NarrowItDownController(MenuSearchService, $http) {
@@ -59,6 +52,7 @@
     }
 
     service.removeItem = function(itemIndex) {
+      console.log(itemIndex);
       foundItems.splice(itemIndex, 1);
     };
 
