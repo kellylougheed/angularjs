@@ -66,9 +66,8 @@
         method: "GET",
         url: "https://davids-restaurant.herokuapp.com/menu_items.json"
         }).then(function (result) {
-          var emptyArray = [];
           var menu = result.data.menu_items;
-          foundItems = [];
+          foundItems.length = 0;
           for (var i = 0; i < result.data.menu_items.length; i++) {
             if (menu[i].description.includes(searchTerm) || menu[i].name.includes(searchTerm)) {
               foundItems.push(menu[i]);
