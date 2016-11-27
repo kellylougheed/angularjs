@@ -68,12 +68,14 @@
         }).then(function (result) {
           var emptyArray = [];
           var menu = result.data.menu_items;
+          for (var j = 0; j < foundItems.length; j++) {
+            removeItem(j);
+          }
           for (var i = 0; i < result.data.menu_items.length; i++) {
             if (menu[i].description.includes(searchTerm) || menu[i].name.includes(searchTerm)) {
-              emptyArray.push(menu[i]);
+              foundItems.push(menu[i]);
             }
           }
-          foundItems = emptyArray;
           console.log(foundItems);
           return foundItems;
       });
