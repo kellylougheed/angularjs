@@ -29,8 +29,6 @@
 
     controller.foundItems = MenuSearchService.getFoundItems();
 
-    controller.errorMessage = MenuSearchService.getErrorMessage();
-
     controller.search = function(searchTerm) {
       MenuSearchService.getMatchedMenuItems(searchTerm);
     };
@@ -48,18 +46,12 @@
 
     var foundItems = [];
 
-    var errorMessage = "";
-
     service.getSearchTerm = function() {
       return searchTerm;
     };
 
     service.getFoundItems = function() {
       return foundItems;
-    }
-
-    service.getErrorMessage = function() {
-      return errorMessage;
     }
 
     service.removeItem = function(itemIndex) {
@@ -80,11 +72,6 @@
             }
           }
           console.log(foundItems);
-          if (foundItems.length === 0) {
-            errorMessage = "Nothing found.";
-          } else {
-            errorMessage = "";
-          }
           return foundItems;
       });
     };
