@@ -69,7 +69,7 @@
           var emptyArray = [];
           var menu = result.data.menu_items;
           for (var j = 0; j < foundItems.length; j++) {
-            removeItem(j);
+            foundItems.splice(j, 1);
           }
           for (var i = 0; i < result.data.menu_items.length; i++) {
             if (menu[i].description.includes(searchTerm) || menu[i].name.includes(searchTerm)) {
