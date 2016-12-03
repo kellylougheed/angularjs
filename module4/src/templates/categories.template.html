@@ -1,0 +1,7 @@
+<h3> Categories </h3>
+
+<div ng-repeat="cat in cats.categories" ui-sref="categoryDetail({categoryId: $index})">
+<button class="btn btn-warning">
+{{ cat.name }} ({{ cat.short_name }})
+</button>
+</div>
